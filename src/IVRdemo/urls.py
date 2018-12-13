@@ -19,7 +19,7 @@ from loquera.views import index, index2, myView, myjsonview, myjson2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index', index2),
+    path('index', index2, name="index"),
     path('gemeric', myView.as_view()),
     path('myjson2', myjson2),
     path('mijson', myjsonview),

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>HOLA</h1>
+<form method="post" action="{% if mipk %} {% url 'var1mipk' var1 mipk %}{% endif %}" >
+    {% csrf_token %}
+    <table>
+    {{form}}
+    <tr><td></td> <td><input type="submit" name="submit" value="Enviar"> </td> </tr>
+</table>
+</form>
+<br>
+{% if isvalid %}
+<h2> Es válido </h2>
+{% else %}
+<h2> No es válido</h2>
+{% endif %}
+</body>
+</html>
